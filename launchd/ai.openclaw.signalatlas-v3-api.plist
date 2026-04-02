@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>ai.openclaw.signalatlas-v3-api</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/opt/homebrew/bin/node</string>
+        <string>--max-old-space-size=4096</string>
+        <string>/Users/twain/.openclaw/workspace-sally/signalatlas/v3/server/index.js</string>
+    </array>
+    
+    <key>WorkingDirectory</key>
+    <string>/Users/twain/.openclaw/workspace-sally/signalatlas/v3</string>
+    
+    <key>EnvironmentVariables</key>
+    <dict>
+        <string>NODE_OPTIONS</string>
+        <string>--max-old-space-size=4096</string>
+        <string>PATH</string>
+        <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+    
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <key>KeepAlive</key>
+    <dict>
+        <key>SuccessfulExit</key>
+        <false/>
+        <key>WatchPaths</key>
+        <array/>
+    </dict>
+    
+    <key>ThrottleInterval</key>
+    <integer>10</integer>
+    
+    <key>HardResourceLimits</key>
+    <dict>
+        <key>PhysicalMemory</key>
+        <integer>524288</integer> <!-- 512MB limit -->
+    </dict>
+    
+    <key>SoftResourceLimits</key>
+    <dict>
+        <key>PhysicalMemory</key>
+        <integer>450560</integer> <!-- 430MB soft limit -->
+    </dict>
+    
+    <key>StandardOutPath</key>
+    <string>/Users/twain/.openclaw/workspace-sally/signalatlas/v3/launchd/ai.openclaw.signalatlas-v3-api.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>/Users/twain/.openclaw/workspace-sally/signalatlas/v3/launchd/ai.openclaw.signalatlas-v3-api.err.log</string>
+    
+    <key>ProcessType</key>
+    <string>Background</string>
+    
+    <key>LowPriorityIO</key>
+    <true/>
+</dict>
+</plist>
